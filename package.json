@@ -1,0 +1,32 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "todolist backend övning 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yaman-du/todo.git"
+  },
+  "author": "Yamandu Nyberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yaman-du/todo/issues"
+  },
+  "homepage": "https://github.com/yaman-du/todo#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.2",
+    "mongoose": "^5.8.11",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "ejs": "^3.0.1",
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "^2.0.2"
+  }
+}
