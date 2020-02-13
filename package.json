@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index"
+    "start": "nodemon index",
+    "sass": "node-sass --watch scss -o public",
+    "dev": "npm-run-all --parallel start sass"
   },
   "repository": {
     "type": "git",
@@ -27,6 +29,7 @@
   "devDependencies": {
     "ejs": "^3.0.1",
     "node-sass-middleware": "^0.11.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5"
   }
 }

@@ -1,5 +1,48 @@
 body{
-    background: thistle;
+    background: darkslategray;
+    text-align: center; 
+    margin-top: 5rem;
+}
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    width: 75%;
+    margin: auto;
+    // justify-content: space-evenly;;
+    // background-color: #fff;
+    // flex-direction: row;
+    // width: 75%;
     text-align: center;
-    margin-top: 20rem;
+    align-items: center; 
+
+        .action {
+            
+            border: black;
+            background-color: #0000ff;
+            
+        }
+        .date{
+            background-color: #ff00ff;
+        
+        }
+        .who{
+            background-color: #ffee00;
+            
+        }
+
+    }
+form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    width: 75%;
+    margin: auto;
+    // .grid-item:nth-child(3){
+    //     background-color: black;
+    //     grid-row: 1 / 2;
+      
+    // }
+    // .button{
+    //     background-color: #fff;
+    //     grid-row: 3 / 4;
+    // }
 }

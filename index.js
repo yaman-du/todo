@@ -12,11 +12,16 @@ const app = express();
 app.set("view engine", "ejs")
 app.use(express.urlencoded({extended:true}));
 
-app.use(sassMiddleware({
-    src: path.join(__dirname, "scss"), 
-    dest: path.join(__dirname, "public")
-}))
-app.use(express.static(path.join(__dirname, "public")));
+
+// app.use(sassMiddleware({
+//     src: path.join(__dirname, "scss"), 
+//     dest: path.join(__dirname, "public"),
+//     debug: true
+//  }))
+// app.use(express.static(path.join(__dirname + "public")));
+app.use('/public', express.static(path.join(__dirname, 'public')))
+// app.use(express.static(__dirname + '/public'));
+
 
 //routes
 app.use(todoRouter)

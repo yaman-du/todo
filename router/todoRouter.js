@@ -28,12 +28,13 @@ todoRouter.get("/todo", async (req, res) =>{
     res.render("todoView", {todoAnswer, title:"yamandus sida "});
 });
 
-todoRouter.get("/delete/id", async (req, res) => {
+todoRouter.get("/delete/:id", async (req, res)=>{
     console.log(req.params.id);
     await TodoModel
     .deleteOne({_id:req.params.id});
-    res.redirect("/todo");
-});
+    //res.send("It works");
+    res.redirect("/todo") 
+})
 
 todoRouter.get("/edit/:id", async (req, res) => {
     const response = await TodoModel.findById({_id:req.params.id})

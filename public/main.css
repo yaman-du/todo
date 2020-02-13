@@ -1,0 +1,25 @@
+body {
+  background: darkslategray;
+  text-align: center;
+  margin-top: 5rem; }
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  align-items: center; }
+  .container .action {
+    border: black;
+    background-color: #0000ff; }
+  .container .date {
+    background-color: #ff00ff; }
+  .container .who {
+    background-color: #ffee00; }
+
+form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  width: 75%;
+  margin: auto; }

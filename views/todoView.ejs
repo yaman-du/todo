@@ -1,8 +1,14 @@
 <%- include ("header.ejs") %>
 
-<%= todoAnswer %>
+<!-- <%= todoAnswer %> -->
+<div class="container">
+    <div>Task</div>
+    <div>Date</div>
+    <div>Who</div>
+</div>
 <% todoAnswer.forEach( (addtodo)=>{ %>
-    <div>
+    
+    <div class="container">
         <div class="action"><%= addtodo.todo %></div>
         <div class="date"><%= addtodo.todo_day %></div>
         <div class="who"><%= addtodo.whose_list %></div>
@@ -12,12 +18,14 @@
 <% }) %>
 
 </%= title %>
-<div>
+<div class="container">
     <form action="/todo" method="post">
     <input type="text" name="todo" placeholder="Enter a task">
     <input type="text" name="todo_day" placeholder="Finished before..?">
     <input type="text" name="whose_list" placeholder="Whose task is this">
-    <button type="submit">Add to list</button>
+    <div class="button">
+        <button type="submit" class="button">Add task</button>
+    </div>
     </form>
 </div>
 <a href="/todo/?sort=-1"></a>
