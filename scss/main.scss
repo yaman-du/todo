@@ -5,6 +5,7 @@ body{
 }
 .container {
     display: grid;
+    background: #f44336;
     grid-template-columns: 2fr 1fr 1fr;
     width: 75%;
     margin: auto;
@@ -14,23 +15,45 @@ body{
     // width: 75%;
     text-align: center;
     align-items: center; 
-
         .action {
-            
             border: black;
-            background-color: #0000ff;
-            
+            background-color: #393E41;
         }
         .date{
-            background-color: #ff00ff;
-        
+            background-color: grey;
+            height: 100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
         }
         .who{
-            background-color: #ffee00;
-            
+            background-color: lightgrey;
+            height: 100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
         }
-
+    
     }
+
+.editDelete{
+        background: linear-gradient(to right,  #393E41 0%,#393E41 50%,grey 50%, grey 75%, lightgrey
+         75%,  lightgrey 100%);
+        width: 75%;
+        margin: auto;
+        a{
+            background-color: #f44336;
+            color: white;
+            padding: 4px 9px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+        a:hover, a:active {
+            background-color: #b63027;
+          }
+    }
+
 form {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -41,8 +64,22 @@ form {
     //     grid-row: 1 / 2;
       
     // }
-    // .button{
-    //     background-color: #fff;
-    //     grid-row: 3 / 4;
-    // }
+    .button{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        width: 50%;
+        text-align: center;
+        color: white;
+        
+        margin: 0 auto;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        button{
+            background-color: #f44336;
+            padding: 4px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+        }
+    }
 }

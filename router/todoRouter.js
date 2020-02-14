@@ -29,7 +29,7 @@ todoRouter.get("/todo", async (req, res) =>{
 });
 
 todoRouter.get("/delete/:id", async (req, res)=>{
-    console.log(req.params.id);
+    console.log("deleted id: " + req.params.id);
     await TodoModel
     .deleteOne({_id:req.params.id});
     //res.send("It works");
