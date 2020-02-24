@@ -1,0 +1,32 @@
+<%- include ("header.ejs") %>
+
+<!-- <%= todoAnswer %> -->
+<div class="container">
+    <div>Task</div>
+    <div>Date</div>
+    <div>Who</div>
+</div>
+<% todoAnswer.forEach( (addtodo)=>{ %>
+    
+    <div class="container">
+        <div class="action"><%= addtodo.todo %></div>
+        <div class="date"><%= addtodo.todo_day %></div>
+        <div class="who"><%= addtodo.whose_list %></div>
+    </div>
+<div class="editDelete">
+<a href="/edit/<%=addtodo._id%>">Edit</a>
+<a href="/delete/<%=addtodo._id%>">Delete</a>
+</div>
+<% }) %>
+
+</%= title %>
+<div class="container">
+    <form action="/todo" method="post">
+    <input type="text" id="inputTodo" name="todo" placeholder="Enter a task">
+    <input type="text" id="inputTodoDay" name="todo_day" placeholder="Finished before..?">
+    <input type="text" id="inputTodoWho" name="whose_list" placeholder="Whose task is this">
+    <div class="button">
+        <button type="submit" class="button" id="btn">Add task</button>
+    </div>
+    </form>
+</div>
